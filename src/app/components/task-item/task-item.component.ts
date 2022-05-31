@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
 import { Task } from 'src/app/Task';
 
 @Component({
@@ -8,11 +8,22 @@ import { Task } from 'src/app/Task';
 })
 export class TaskItemComponent implements OnInit {
 
-  @Input() task!:Task
+  @Input() task!: Task
+  
+  @Output() onDeleteTask: EventEmitter<Task> = new EventEmitter()
+  @Output() onToggleReminder: EventEmitter<Task> = new EventEmitter()
   
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onDelete(task: Task): void{
+    this.onDeleteTask.emit(task)
+  }
+
+  onToggle(task: Task) {
+    this.onToggleReminder.emit(task)
   }
 
 }
