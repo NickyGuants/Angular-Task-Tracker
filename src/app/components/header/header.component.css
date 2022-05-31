@@ -1,17 +1,6 @@
-nav{
+header{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: black;
-    color: white;
-    font-size: 30px;
-}
-
-nav li{
-    list-style: none;
-    padding: 2rem;
-}
-
-nav li:hover{
-    color: blue;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
