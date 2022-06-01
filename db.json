@@ -17,12 +17,6 @@
       "text": "Food Shopping",
       "day": "May 7th at 12:30pm",
       "reminder": true
-    },
-    {
-      "text": "another task",
-      "day": "12 may 2020",
-      "reminder": false,
-      "id": 5
     }
   ]
 }
